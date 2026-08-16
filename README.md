@@ -9,13 +9,13 @@ Float reader for addresses mapped inside the app's own process.
 - Android SDK Build-Tools 29.0.3
 - Android NDK with CMake 3.10.2
 - JDK 8 or JDK 11
-- Gradle 6.7.1
+- Gradle 6.7.1 (wrapper)
 - Android Gradle Plugin 4.2.2
 
 ## Run
 
 1. Install Android SDK Platform 29, Build-Tools 29.0.3, NDK, and CMake 3.10.2.
-2. Open this directory in Android Studio, select Gradle 6.7.1, and sync.
+2. Open this directory in Android Studio and sync the Gradle wrapper.
 3. Run on an Android 6.0-10 device or emulator.
 4. Tap `Create demo address`, then `Read once` to verify native reads.
 5. Tap `Start overlay` and grant the system overlay permission.
