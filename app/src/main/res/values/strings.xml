@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Float Overlay Demo</string>
+    <string name="notification_channel">Float overlay</string>
+    <string name="notification_title">Float overlay is active</string>
+</resources>
