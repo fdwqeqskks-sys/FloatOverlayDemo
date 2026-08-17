@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "com.example.floatoverlaydemo"
+        applicationId "com.example.myapp"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
