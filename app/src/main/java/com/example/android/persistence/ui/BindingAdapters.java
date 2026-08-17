@@ -14,26 +14,15 @@
  * limitations under the License.
  */
 
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+package com.example.android.persistence.ui;
 
-buildscript {
-    apply from: 'versions.gradle'
-    addRepos(repositories)
-    dependencies {
-        classpath deps.android_gradle_plugin
+import androidx.databinding.BindingAdapter;
+import android.view.View;
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+
+public class BindingAdapters {
+    @BindingAdapter("visibleGone")
+    public static void showHide(View view, boolean show) {
+        view.setVisibility(show ? View.VISIBLE : View.GONE);
     }
-    repositories {
-        google()
-    }
-}
-
-allprojects {
-    addRepos(repositories)
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
 }

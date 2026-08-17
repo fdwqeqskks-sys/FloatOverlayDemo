@@ -14,26 +14,13 @@
  * limitations under the License.
  */
 
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+package com.example.android.persistence.model;
 
-buildscript {
-    apply from: 'versions.gradle'
-    addRepos(repositories)
-    dependencies {
-        classpath deps.android_gradle_plugin
+import java.util.Date;
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-    }
-    repositories {
-        google()
-    }
-}
-
-allprojects {
-    addRepos(repositories)
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
+public interface Comment {
+    int getId();
+    int getProductId();
+    String getText();
+    Date getPostedAt();
 }

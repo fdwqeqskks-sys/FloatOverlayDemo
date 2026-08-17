@@ -14,26 +14,30 @@
  * limitations under the License.
  */
 
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+package com.example.android.persistence;
 
-buildscript {
-    apply from: 'versions.gradle'
-    addRepos(repositories)
-    dependencies {
-        classpath deps.android_gradle_plugin
+import android.app.Application;
+import com.example.android.persistence.db.AppDatabase;
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+/**
+ * Android Application class. Used for accessing singletons.
+ */
+public class BasicApp extends Application {
+
+    private AppExecutors mAppExecutors;
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+
+        mAppExecutors = new AppExecutors();
     }
-    repositories {
-        google()
+
+    public AppDatabase getDatabase() {
+        return AppDatabase.getInstance(this, mAppExecutors);
     }
-}
 
-allprojects {
-    addRepos(repositories)
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
+    public DataRepository getRepository() {
+        return DataRepository.getInstance(getDatabase());
+    }
 }
