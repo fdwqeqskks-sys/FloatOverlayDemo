@@ -4,41 +4,16 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "com.example.floatoverlay"
-        minSdkVersion 23
+        applicationId "com.example.floatoverlaydemo"
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-
-        externalNativeBuild {
-            cmake {
-                cppFlags "-std=c++17 -Wall -Wextra"
-                arguments "-DANDROID_STL=c++_static"
-            }
-        }
-
-        ndk {
-            abiFilters "armeabi-v7a", "arm64-v8a"
-        }
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
-        }
     }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-    externalNativeBuild {
-        cmake {
-            path "src/main/cpp/CMakeLists.txt"
-            version "3.10.2"
-        }
     }
 }
 

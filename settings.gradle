@@ -1,2 +1,2 @@
-rootProject.name = "FloatOverlayDemo"
+rootProject.name = "FloatOverlayHelloWorld"
 include ":app"
